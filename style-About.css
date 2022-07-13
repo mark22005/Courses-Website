@@ -1,0 +1,374 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+body
+{
+    font-family: 'Poppins', sans-serif;
+}
+:root
+{
+    --main-color: #f44336;
+    --padding-section: 30px;
+}
+ul
+{
+    list-style: none;
+}
+.container
+{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media(min-width: 780px) and (max-width: 1400px)
+{
+    .container
+    {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    header .container
+    {
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+}
+
+/* Start Header */
+header
+{
+    position: absolute;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+}
+header .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 97px;
+    position: relative;
+    
+
+}
+header .container nav ul
+{
+    display: flex;
+    flex: 1;
+    justify-content: end;
+    align-items: center;
+}
+@media(min-width: 767px)
+{
+    header .container i
+    {
+        display: none;
+    }
+}
+@media(max-width: 767px)
+{
+    header .container nav ul
+    {
+        display: none;
+    }
+
+    header .container img
+{
+    margin-left: 10px;
+}
+
+    header .container i
+    {
+        position: absolute;
+        right: 40px;
+        top: 58px;
+        color: white;
+        font-size: 22px;
+    }
+    header .container i:hover + ul
+    {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #00000075;
+        width: 100%;
+        height: 200px;
+        z-index: 2;
+    }
+    header .container i:hover + ul li a
+    {
+        position: absolute;
+        transform: translateY(-20px);
+        left: 20px;
+        padding-bottom: 5px;
+        -webkit-transform: translateY(-20px);
+        -moz-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        -o-transform: translateY(-20px);
+    }
+}
+header .container nav ul
+{
+    padding-top: 50px;
+}
+header .container nav ul li
+{
+    margin: 15px;
+}
+header .container nav ul li a
+{
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    text-transform: uppercase;
+    display: block;
+    font-size: 14px;
+}
+header .container nav ul li::after
+{
+    content: "";
+    width: 0%;
+    transform: translateY(5px);
+    height: 2px;
+    background-color: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    -o-transform: translateY(5px);
+}
+header .container nav ul li:hover::after
+{
+    width: 100%;
+}
+header .container img
+{
+    width: 150px;
+    margin-top: 50px;
+}
+@media(max-width: 281px)
+{
+    header .container img
+    {
+        width: 100px;
+    }
+    header .container i
+    {
+        font-size: 18px;
+        position: absolute;
+        right: 25px;
+        top: 61px;
+    }
+}
+/* End Header */
+
+/* Start landing */
+.landing
+{
+    background-image: url("../background.jpg");
+    min-height: 60vh;
+    margin-top: -22px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-bottom: 100px;
+}
+.landing .overlay
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgb(0 0 0 / 80%);;
+}
+.landing .overlay .content
+{
+    position: absolute;
+    width: 90%;
+    text-align: center;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50% , -60%);
+    -webkit-transform: translate(-50% , -60%);
+    -moz-transform: translate(-50% , -60%);
+    -ms-transform: translate(-50% , -60%);
+    -o-transform: translate(-50% , -60%);
+}
+.landing .overlay .content .text h1
+{
+    color: #fff;
+    font-weight: 600;
+}
+
+/* End landing */
+
+/* Start About */
+.About
+{
+    padding-top: 150px;
+}
+.About .content
+{
+    display: flex;
+    width: 100%;
+}
+@media (max-width: 992px)
+{
+    .About .content
+    {
+        flex-direction: column-reverse;
+    }
+}
+.About .content .box
+{
+    flex: 1;
+    padding: 20px;
+}
+.About .content .image img
+{
+    width: 100%;
+}
+.About .content .info
+{
+    margin-top: -20px;
+}
+.About .content .info .text h1
+{
+    line-height: 1.5;
+    font-size: 30px;
+}
+@media (max-width: 281px)
+{
+    .About .content .info .text h1
+    {
+        font-size: 15px;
+    }
+}
+@media (min-width: 282px) and (max-width: 770px)
+{
+    .About .content .info .text h1
+    {
+        font-size: 21px;
+    }  
+}
+.About .content .info .text p
+{
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+    padding-bottom: 25px;
+}
+.About .content .info .button
+{
+    border: 1px solid var(--main-color);
+    width: fit-content;
+    padding: 10px 30px;
+    position: relative;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    cursor: pointer;
+}
+.About .content .info .button::before
+{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: var(--main-color);
+    right: -15px;
+    top: 50%;
+    transition: 1s;
+}
+.About .content .info .button::after
+{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: var(--main-color);
+    left: -15px;
+    top: 50%;
+    transition: 1s;
+}
+.About .content .info .button a
+{
+    text-decoration: none;
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+.About .content .info .button:hover,
+.About .content .info .button:hover::before,
+.About .content .info .button:hover::after
+{
+    background-color: var(--main-color);
+}
+.About .content .info .button:hover a
+{
+    color: #fff;
+}
+/* End About */
+
+/* Start footer */
+footer
+{
+    padding-top: 200px;
+}
+footer .content
+{
+    position: relative;
+    width: 100%;
+}
+footer .content .text
+{
+    text-align: center;
+}
+footer .content .text h5
+{
+    padding-bottom: 25px;
+}
+footer .content .text p
+{
+    padding-bottom: 10px;
+    color: #777;
+    font-size: 12px;
+}
+footer .content .text i
+{
+    padding: 9px;
+    font-size: 14px;
+    color: var(--main-color);
+}
+footer .content .text .heart
+{
+    font-size: 14px;
+    padding: 3px;
+    color: var(--main-color);
+}
+footer .content .text .end
+{
+    padding-top: 15px;
+    padding-bottom: 20px;
+    color: #777
+}
+/* End footer */
